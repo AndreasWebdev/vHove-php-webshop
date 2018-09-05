@@ -12,6 +12,12 @@
       <?php
         $product = $_GET['product'];
       
+      
+        if($_POST['submit'] {
+          
+        }
+      
+      
         switch($product) {
           case 1:
             $productTitle = "Ruhrgebiet";
@@ -27,7 +33,7 @@
       <h3><?=$productTitle;?></h3>
       <p><?=$productDesc;?></p>
       
-      <form action="checkout.php" method="POST">
+      <form action="" method="POST">
         <input type="hidden" name="product" value="<?=$product;?>" />
         <select name="size">
           <option value="xs">XS</option>
@@ -37,7 +43,7 @@
           <option value="xxl">XXL</option>
         </select><br />
         <input type="number" name="amount" value="1" /><br />
-        <input type="submit" value="Bestellen" />
+        <input type="submit" name="submit" value="Bestellen" />
       </form>
       
       <?php
