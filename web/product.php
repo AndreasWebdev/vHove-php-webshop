@@ -34,15 +34,15 @@
       
       <hr />
       
-      <input type="hidden" name="product" value="<?=$product;?>" />
-      <select name="size">
+      <input type="hidden" class="dataProduct" value="<?=$product;?>" />
+      <select class="dataSize">
         <option value="xs">XS</option>
         <option value="s">S</option>
         <option value="m">M</option>
         <option value="xl">XL</option>
         <option value="xxl">XXL</option>
       </select><br />
-      <input type="number" name="amount" value="1" /><br />
+      <input type="number" class="dataAmount" value="1" /><br />
       <button class="addToCheckout">Zum Warenkorb hinzufügen</button>
       
       <script>
@@ -51,9 +51,9 @@
         addToCheckoutButton.addEventListener('click', addToCheckout());
         
         function addToCheckout() {
-          var dataProduct = document.querySelector('input[name="product"]');
-          var dataSize = document.querySelector('input[name="size"]');
-          var dataAmount = document.querySelector('input[name="amount"]');
+          var dataProduct = document.querySelector('.dataProduct').value;
+          var dataSize = document.querySelector('.dataSize').value;
+          var dataAmount = document.querySelector('.dataAmount').value;
           
           console.log(dataProduct + " - " + dataSize + " - " + dataAmount);
         }
