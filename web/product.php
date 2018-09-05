@@ -48,7 +48,7 @@
       <script>
         var addToCheckoutButton = document.querySelector('.addToCheckout');
         
-        addToCheckoutButton.addEventListener('click', addToCheckout());
+        addToCheckoutButton.addEventListener('click', addToCheckout(), false);
         
         function addToCheckout() {
           var dataProduct = document.querySelector('.dataProduct').value;
