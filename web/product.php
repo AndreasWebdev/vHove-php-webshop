@@ -49,8 +49,6 @@
           var dataAmount = document.querySelector('.dataAmount').value;
           
           console.log(dataProduct + " - " + dataSize + " - " + dataAmount);
-          
-          // Save to cart
         });
       </script>
       
