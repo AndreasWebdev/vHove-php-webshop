@@ -12,11 +12,6 @@
       <?php
         $product = $_GET['product'];
       
-        if($_POST['submit']) {
-          $_COOKIE['checkout'][] = array('product' => $_POST['product'], 'size' => $_POST['size'], 'amount' => $_POST['amount']);
-          echo "Erfolgreich zum Warenkorb hinzugefügt! <a href='checkout.php'>Zum Checkout</a>";
-        }
-      
         switch($product) {
           case 1:
             $productTitle = "Ruhrgebiet";
@@ -44,6 +39,11 @@
       </select><br />
       <input type="number" class="dataAmount" value="1" /><br />
       <button class="addToCheckout">Zum Warenkorb hinzufügen</button>
+      
+      <?php
+        setcookie('checkout', array(1 => "Test", 2 => "Warenkorb 2");
+        echo $_COOKIE['checkout'];
+      ?>
       
       <script>
         var addToCheckoutButton = document.querySelector('.addToCheckout');
