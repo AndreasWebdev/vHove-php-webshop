@@ -35,7 +35,7 @@
           <option value="xl">XL</option>
           <option value="xxl">XXL</option>
         </select><br />
-        <input type="number" name="amount" /><br />
+        <input type="number" name="amount" value="1" /><br />
         <input type="submit" value="Bestellen" />
       </form>
       
