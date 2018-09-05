@@ -10,7 +10,7 @@
       <h1>Checkout</h1>
       
       <?php
-        var_dump($_SESSION['checkout']);
+        var_dump($_COOKIE['checkout']);
       ?>
       
       <?php
