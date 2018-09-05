@@ -28,6 +28,7 @@
       <p><?=$productDesc;?></p>
       
       <form action="checkout.php" method="POST">
+        <input type="hidden" name="product" value="<?=$product;?>" />
         <select name="size">
           <option value="xs">XS</option>
           <option value="s">S</option>
