@@ -48,15 +48,13 @@
       <script>
         var addToCheckoutButton = document.querySelector('.addToCheckout');
         
-        addToCheckoutButton.addEventListener('click', addToCheckout(), false);
-        
-        function addToCheckout() {
+        addToCheckoutButton.addEventListener('click', function() {
           var dataProduct = document.querySelector('.dataProduct').value;
           var dataSize = document.querySelector('.dataSize').value;
           var dataAmount = document.querySelector('.dataAmount').value;
           
           console.log(dataProduct + " - " + dataSize + " - " + dataAmount);
-        }
+        });
       </script>
       
       <?php
