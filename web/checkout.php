@@ -10,6 +10,10 @@
       <h1>Checkout</h1>
       
       <?php
+        var_dump($_POST);
+      ?>
+      
+      <?php
         include('template/footer.php');
       ?>
     </body>
