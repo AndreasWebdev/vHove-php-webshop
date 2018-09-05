@@ -13,7 +13,7 @@
         $product = $_GET['product'];
       
       
-        if($_POST['submit'] {
+        if($_POST['submit']) {
           $_SESSION['checkout'][] = array('product' => $_POST['product'], 'size' => $_POST['size'], 'amount' => $_POST['amount']);
           echo "Erfolgreich zum Warenkorb hinzugefügt! <a href='checkout.php'>Zum Checkout</a>";
         }
