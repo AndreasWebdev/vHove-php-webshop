@@ -47,8 +47,14 @@
           var dataProduct = document.querySelector('.dataProduct').value;
           var dataSize = document.querySelector('.dataSize').value;
           var dataAmount = document.querySelector('.dataAmount').value;
-          
-          console.log(dataProduct + " - " + dataSize + " - " + dataAmount);
+		  
+		  // send new cart items to server
+		  fetch('inc/api.addToCart.php?product=' + dataProduct + '&size=' + dataSize + "&amount=" + dataAmount)
+		  .then(function(response) {
+			  return response.json();
+		  }).then(function(data) {
+			console.log( data );
+		  });
         });
       </script>
       
