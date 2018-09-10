@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
   <html>
     <head>
@@ -51,7 +54,7 @@
 		  // send new cart items to server
 		  fetch('inc/api.addToCart.php?product=' + dataProduct + '&size=' + dataSize + "&amount=" + dataAmount)
 		  .then(function(response) {
-			  return response.json();
+			  return response.text();
 		  }).then(function(data) {
 			console.log( data );
 		  });
