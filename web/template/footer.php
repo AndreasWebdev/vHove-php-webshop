@@ -12,7 +12,7 @@
 	function refreshCart( cart ) {
 		// Set Cart Number
 		var elCartNumber = document.querySelector(".cartNumber");
-		elCartNumber.innerHTML = cart.length;
+		elCartNumber.innerHTML = Object.keys(cart).length;
 		
 		// Set Cart
 		var elCart = document.querySelector(".cart");
@@ -25,7 +25,7 @@
 			
 			var newCartItem = document.createElement("div");
 			newCartItem.classList.add("cartItem");
-			newCartItem.innerHTML = "<b>" + productItem.title + "</b><br />" + cartItem[1] + " x " + cartItem[2] + "<br /><button onClick='removeFromCart(\"" + key + "\");'>&times;</button>";
+			newCartItem.innerHTML = "<b>" + productItem.title + "</b><br />[" + cartItem[1] + "] " + productItem.price + "€ x " + cartItem[2] + " = " + (Math.round((productItem.price * cartItem[2]) * 100) / 100) + "€<br /><button onClick='removeFromCart(\"" + key + "\");'>&times;</button>";
 			
 			elCart.appendChild(newCartItem);
 		}

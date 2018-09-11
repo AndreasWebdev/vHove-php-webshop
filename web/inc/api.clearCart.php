@@ -6,8 +6,8 @@
   session_start();
   
   // Set session
-  $_SESSION['cart'] = [];
-  $currentCart = [];
+  $_SESSION['cart'] = new stdClass();
+  $currentCart = new stdClass();
   
   // Response
   echo json_encode([true, $currentCart]);

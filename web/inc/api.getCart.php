@@ -6,7 +6,7 @@
   session_start();
   
   // Get the current cart
-  $currentCart = [];
+  $currentCart = new stdClass();
   $currentCart = $_SESSION['cart'];
   
   // Response

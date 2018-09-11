@@ -20,10 +20,14 @@ session_start();
 		$productTitle = $products[$pid]['title'];
 		$productDesc = $products[$pid]['desc'];
 		$productImg = $products[$pid]['img'];
+		$productPrice = $products[$pid]['price'];
       ?>
       
       <h3><?=$productTitle;?></h3>
-      <p><?=$productDesc;?></p>
+      <p>
+		<?=$productDesc;?><br />
+		<b>Preis: <?=$productPrice;?></b>
+	  </p>
       
       <hr />
       

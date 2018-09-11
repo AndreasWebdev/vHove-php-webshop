@@ -11,14 +11,14 @@
   $dataAmount = $_GET['amount'];
   
   // Get the current cart
-  $currentCart = [];
+  $currentCart = new stdClass();
   $currentCart = $_SESSION['cart'];
   
   // new cart item index
   $dataCartID = uniqid();
   
   // Construct new cart item
-  $currentCart[$dataCartID] = [$dataProduct, $dataSize, $dataAmount];
+  $currentCart->$dataCartID = [$dataProduct, $dataSize, $dataAmount];
   
   // Set session
   $_SESSION['cart'] = $currentCart;

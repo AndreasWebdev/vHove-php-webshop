@@ -9,11 +9,11 @@
   $dataCartIndex = $_GET['cid'];
   
   // Get the current cart
-  $currentCart = [];
+  $currentCart = new stdClass();
   $currentCart = $_SESSION['cart'];
   
   // Remove item from cart array
-  unset($currentCart[$dataCartIndex]);
+  unset($currentCart->$dataCartIndex);
   
   // Set session
   $_SESSION['cart'] = $currentCart;
