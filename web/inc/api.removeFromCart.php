@@ -6,21 +6,14 @@
   session_start();
 
   // Get the payload
-  $dataProduct = $_GET['product'];
-  $dataSize = $_GET['size'];
-  $dataAmount = $_GET['amount'];
+  $dataCartIndex = $_GET['cid'];
   
   // Get the current cart
   $currentCart = [];
   $currentCart = $_SESSION['cart'];
   
-  // Construct the item to remove
-  $cartItemToRemove = [$dataProduct, $dataSize, $dataAmount];
-  
   // Remove item from cart array
-  if (($key = array_search($cartItemToRemove, $currentCart)) !== false) {
-	unset($currentCart[$key]);
-  }
+  unset($currentCart[$dataCartIndex]);
   
   // Set session
   $_SESSION['cart'] = $currentCart;

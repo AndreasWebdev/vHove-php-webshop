@@ -14,12 +14,15 @@
   $currentCart = [];
   $currentCart = $_SESSION['cart'];
   
+  // new cart item index
+  $dataCartID = uniqid();
+  
   // Construct new cart item
-  $currentCart[] = [$dataProduct, $dataSize, $dataAmount];
+  $currentCart[$dataCartID] = [$dataProduct, $dataSize, $dataAmount];
   
   // Set session
   $_SESSION['cart'] = $currentCart;
   
   // Response
-  echo json_encode([true, $currentCart]);
+  echo json_encode([true, $currentCart, $dataCartID]);
 ?>
