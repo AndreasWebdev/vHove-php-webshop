@@ -1,5 +1,5 @@
 <?php
-session_start();
+include('template/pageHeader.php');
 ?>
 <!DOCTYPE html>
   <html>
