@@ -3,7 +3,12 @@
 </footer>
 
 <script>
-	function reloadCart() {
+	function refreshCart( cart ) {
+		var cartNumber = document.querySelector(".cartNumber");
+		var cart = document.querySelector(".cart");
 		
+		console.log(cart);
+		
+		cartNumber.innerHTML = cart.length;
 	}
 </script>

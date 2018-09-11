@@ -14,8 +14,13 @@
   $currentCart = [];
   $currentCart = $_SESSION['cart'];
   
-  // Construct new cart item
-  $currentCart[] = [$dataProduct, $dataSize, $dataAmount];
+  // Construct the item to remove
+  $cartItemToRemove = [$dataProduct, $dataSize, $dataAmount];
+  
+  // Remove item from cart array
+  if (($key = array_search($cartItemToRemove, $currentCart)) !== false) {
+	unset($currentCart[$key]);
+  }
   
   // Set session
   $_SESSION['cart'] = $currentCart;

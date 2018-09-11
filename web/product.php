@@ -54,9 +54,11 @@ session_start();
 		  // send new cart items to server
 		  fetch('inc/api.addToCart.php?product=' + dataProduct + '&size=' + dataSize + "&amount=" + dataAmount)
 		  .then(function(response) {
-			  return response.text();
+			  return response.json();
 		  }).then(function(data) {
-			console.log( data );
+			if(data[0] == true) {
+				refreshCart(data[1]);
+			}
 		  });
         });
       </script>

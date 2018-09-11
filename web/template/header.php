@@ -5,5 +5,8 @@
     <a href="index.php">Home</a>
   </nav>
   
-  Warenkorb: <?=count($_COOKIE['checkout']);?>
+  Warenkorb: (<span class="cartNumber">0</span>)
+  
+  <div class="cart">
+  </div>
 </header>
