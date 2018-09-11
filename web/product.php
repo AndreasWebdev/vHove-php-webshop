@@ -13,18 +13,13 @@ session_start();
       <h1>Product</h1>
       
       <?php
-        $product = $_GET['product'];
-      
-        switch($product) {
-          case 1:
-            $productTitle = "Ruhrgebiet";
-            $productDesc = "Wir sind das Ruhrgebiet!";
-            break;
-          case 2:
-            $productTitle = "Gelsenkirchen";
-            $productDesc = "Da is Schalke04 Land und so..";
-            break;
-        }
+		include('inc/productsList.php');
+		
+        $pid = $_GET['product'];
+		
+		$productTitle = $products[$pid]['title'];
+		$productDesc = $products[$pid]['desc'];
+		$productImg = $products[$pid]['img'];
       ?>
       
       <h3><?=$productTitle;?></h3>
@@ -32,7 +27,7 @@ session_start();
       
       <hr />
       
-      <input type="hidden" class="dataProduct" value="<?=$product;?>" />
+      <input type="hidden" class="dataProduct" value="<?=$pid;?>" />
       <select class="dataSize">
         <option value="xs">XS</option>
         <option value="s">S</option>

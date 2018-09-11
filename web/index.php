@@ -12,8 +12,8 @@ session_start();
       
       <h1>Index</h1>
       
-      <a href="product.php?product=1">Ruhrgebiet</a>
-      <a href="product.php?product=2">Gelsenkirchen</a>
+      <a href="product.php?product=0">Ruhrgebiet</a>
+      <a href="product.php?product=1">Gelsenkirchen</a>
       
       <?php
         include('template/footer.php');
