@@ -10,11 +10,13 @@
   $dataSize = $_GET['size'];
   $dataAmount = $_GET['amount'];
   
-  // Get the current cart
+  // constructs an empty object and then sets the current cart. If the cart is not set, it will return an empty object
+  // using objects because an array would automatically turn into an object if you would delete the first (index 0) item
   $currentCart = new stdClass();
   $currentCart = $_SESSION['cart'];
   
-  // new cart item index
+  // new cart item index/key
+  // using a uniqid as index/key so there are no duplicates
   $dataCartID = uniqid();
   
   // Construct new cart item
