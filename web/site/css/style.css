@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,700');
+
+*{
+	margin: 0px;
+	padding: 0px;
+	text-decoration: none;
+	font-family: Arvo, serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	background: #666666 url(../img/bg.png) center center no-repeat fixed;
+	background-size: cover;
+	padding-top: 150px;
+}
+
+h1 {
+	color: #FFF;
+	text-align: center;
+	font-weight: 700;
+}
+h2 {
+	font-size: 44px;
+	color:#FFF;
+	margin-bottom: 30px;
+	margin-top: 60px;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 36px;
+	color: #FFF;
+	margin-bottom: 15px;
+	margin-top: 0px;
+}
+
+p {
+	font-size: 16px;
+	color: #FFF;
+}
+
+nav {
+	background-color: rgba(0,0,0,0.50) !important;
+	height: 120px;
+	border: 0px !important;
+}
+nav a {
+	font-size: 18px;
+	padding: 15px 10px;
+	margin: 33px 10px; 
+	transition: ease 0.3s;
+	color: #FFFFFF !important;
+}
+nav .dropdown-menu {
+	background-color: rgba(0,0,0,0.50) !important;
+}
+nav li a:hover {
+	border-bottom: 2px solid #FFFFFF !important;
+	color: #e94e1b !important;
+}
+nav li a:active {
+	border-bottom: 2px solid #FFFFFF !important;
+	background: transparent !important;
+	color: #e94e1b !important;
+}
+.active a {
+	border-bottom: 2px solid #FFFFFF;
+	background: transparent !important;
+	color: #e94e1b;
+}
+.navbar-brand {
+	margin: 10px !important;
+	background: transparent !important;
+}
+.brand-img {
+	width: 180px;
+	height: auto;
+}
+.navbar-toggle {
+	border: none;
+	background: rgba(0,0,0,0.50)!important;
+	margin: 15px 15px;
+	padding: 15px;
+}
+.navbar-collapse {
+	background: transparent !important;
+}
+.icon-search {
+	width: 17px;
+	height: 17px;
+}
+.icon-nav img{
+	width: 25px;
+	height: auto;
+}
+.icon-nav {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.icon-nav:hover {
+	border: none !important;
+}
+.navbar-form {
+	margin: 33px 15px;
+	padding: 12px;
+}
+.stripes {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+}
+.stripes img {
+	width: 1000px;
+	height: auto;
+	mix-blend-mode: multiply !important; /* Hmm - funzt nicht. Entweder keine direkte verbindung zum BG, oder chrome hat damit derzeit probleme (habe ich gelesen)*/
+}
+/*
+.stripesBot {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+}
+
+.stripesBot img {
+	z-index: 1;
+	width: 1000px;
+	height: auto;	
+}
+*/
+
+.img-wrap {
+	overflow: hidden;
+}
+.img-wrap img{
+	transition: ease 0.3s;
+}
+.img-wrap img:hover {
+	transform: rotate(5deg) scale(1.15);
+}
+
+.img-wrap-shirts {
+	overflow: hidden;
+	background: url(../img/s_bg.png) center center no-repeat;
+	background-size: contain;
+	
+}
+.img-wrap-shirts img{
+	margin:auto;
+	max-height: 700px;
+	transition: ease 0.3s;
+}
+.img-wrap-shirts img:hover {
+	transform: rotate(-3deg) scale(1.03);
+}
+
+.img-btn {
+	padding: 30px;
+}
+
+.price {
+	font-size: 44px;
+	font-weight: 700;
+	color: #e94e1b;
+}
+
+.prefooter {
+	background:  url(../img/skyline.png) center center no-repeat;
+	background-size: cover;
+	height: 200px;
+	opacity: 0.8;
+}
+.btn-size {
+	margin: 30px 0px;
+}
+.size {
+	width: 52px;
+	height: 52px;
+	padding: 5px;
+	background: #FFF;
+	border: 2px solid #000;
+	color: #000;
+	font-weight: 700;
+	transition: ease 0.3s;
+}
+
+.size:hover {
+	background: #e94e1b;
+}
+
+select[id="HowMuchIsTheFish"] {
+	padding:10px;
+	font-size: 16px;
+	font-weight: 700;
+	border: 2px solid #000;
+}
+
+label[for="HowMuchIsTheFish"] {
+	line-height: 50px;
+	color: #FFF;
+	margin: 0px 15px;
+}
+
+input[id="intoCart"] {
+	background: #e94e1b;
+	border: none;
+	padding: 15px;
+	font-size: 16px;
+	font-weight: 700;
+	color: #FFF;
+	margin: 30px 0px;
+	transition: ease 0.3s;
+}
+input[id="intoCart"]:hover {
+	color:#000;
+	background: #FFF;
+}
+
+footer {
+	height: 120px;
+	background: rgba(0,0,0,0.8);
+	z-index: 2;
+}
+
+footer p {
+	padding: 30px;
+}
+
+footer a {
+	color: #e94e1b;
+}
