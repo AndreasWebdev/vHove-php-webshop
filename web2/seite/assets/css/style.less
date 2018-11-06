@@ -27,8 +27,34 @@ body {
   display: grid;
   grid-template-rows: auto auto 1fr;
   min-height: 100vh;
+
+  button, input[type="button"], input[type="submit"] {
+    background: @colorMain;
+    color: @bodyText;
+    padding: 10px 25px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border: 2px solid transparent;
+    transition: 0.15s ease all;
+
+    &:hover {
+      background: @bodyText;
+      color: @bodyColor;
+      cursor: pointer;
+    }
+    &:active {
+      border-color: @bodyColor;
+    }
+    &:focus {
+      outline: 0;
+    }
+  }
 }
 header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 100;
   background-image: url('../img/stripes.svg');
   background-repeat: no-repeat;
   background-position: right;
@@ -37,11 +63,61 @@ header {
 
   & .grid-wrapper {
     grid-template-columns: auto 1fr auto;
+    grid-gap: 50px;
   }
   & img.logo {
     height: 60px;
     margin: 20px 0px;
+    transition: 0.6s ease height;
   }
+  & nav {
+    display: flex;
+    align-items: center;
+
+    & a {
+      padding: 10px 15px;
+      color: @bodyText;
+      font-size: 1.15em;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.2s ease all;
+
+      &:hover {
+        color: @colorMain;
+      }
+    }
+  }
+  & .customer-region {
+    display: flex;
+    align-items: center;
+
+    & a {
+      padding: 10px 15px;
+      color: @bodyText;
+      font-size: 1.5em;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.2s ease all;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        color: @colorMain;
+      }
+      & i {
+        margin-right: 10px;
+      }
+      & span {
+        font-size: 0.75em;
+      }
+    }
+  }
+  &.headerFixed img.logo {
+    height: 35px;
+  }
+}
+.headerSpace {
+  width: 100%;
 }
 main {
   margin-top: 70px;
@@ -83,32 +159,122 @@ main {
             margin-bottom: 10px;
             line-height: 1.5;
           }
-          & button {
-            background: @colorMain;
-            color: @bodyText;
-            padding: 10px 25px;
-            font-size: 18px;
-            margin-bottom: 10px;
-            border: 2px solid transparent;
-            transition: 0.15s ease all;
-
-            &:hover {
-              background: @bodyText;
-              color: @bodyColor;
-              cursor: pointer;
-            }
-            &:active {
-              border-color: @bodyColor;
-            }
-            &:focus {
-              outline: 0;
-            }
-          }
           & img {
             display: block;
             width: 180px;
             margin: 0 auto;
             margin-top: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  &.login {
+    display: grid;
+    grid-gap: 50px;
+
+    & .grid-wrapper {
+      grid-template-columns: 1fr 350px;
+      grid-gap: 25px;
+
+      & .login-image {
+        min-height: 400px;
+        background-image: url('../img/feed-merch-soon.jpg');
+        background-size: cover;
+      }
+      & .login-sidebar {
+        & h1 {
+          font-size: 1.75em;
+          margin-bottom: 10px;
+        }
+        & p {
+          margin-bottom: 10px;
+          line-height: 1.5;
+        }
+        & form {
+          & input {
+            display: block;
+            margin-bottom: 10px;
+
+            &[type="email"], &[type="password"] {
+              width: 100%;
+              background: @bodyText;
+              color: @bodyColor;
+              padding: 10px 25px;
+              font-size: 16px;
+              border: 2px solid @bodyColor;
+              transition: 0.15s ease all;
+
+              &:hover {
+                background: #eee;
+              }
+              &:focus {
+                outline: 0;
+                border-color: @colorMain;
+              }
+            }
+          }
+        }
+        & img {
+          display: block;
+          width: 180px;
+          margin: 0 auto;
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+
+  &.shirts {
+    display: grid;
+    grid-gap: 50px;
+
+    & .grid-wrapper {
+      grid-template-columns: 1fr;
+
+      & > h1 {
+        font-size: 2.5em;
+        grid-column: 1 / span 2;
+      }
+      & .renders {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+        margin-top: 15px;
+        width: 100%;
+
+        & .render {
+          height: 400px;
+          width: 100%;
+          display: grid;
+          grid-template-rows: 1fr auto;
+          grid-gap: 10px;
+
+          & .shirt-preview {
+            height: 100%;
+            width: 100%;
+            background-image: url('../img/shirt_background.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & img {
+              height: 360px;
+              transition: 0.3s ease all;
+              will-change: transform;
+            }
+
+            &:hover img {
+              transform: scale(1.15) rotate(-4deg);
+            }
+          }
+          & h2 {
+            font-size: 1.25em;
+            margin: 0 auto;
           }
         }
       }
@@ -120,7 +286,8 @@ footer {
   background-image: url('../img/skyline.png');
   background-position: top;
   background-size: contain;
-  padding-top: 125px;
+  padding-top: 100px;
+  padding-bottom: 50px;
   text-align: center;
   line-height: 1.5;
 

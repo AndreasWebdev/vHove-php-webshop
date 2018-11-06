@@ -21,7 +21,39 @@ body {
   grid-template-rows: auto auto 1fr;
   min-height: 100vh;
 }
+body button,
+body input[type="button"],
+body input[type="submit"] {
+  background: #E94F1C;
+  color: #fff;
+  padding: 10px 25px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  border: 2px solid transparent;
+  transition: 0.15s ease all;
+}
+body button:hover,
+body input[type="button"]:hover,
+body input[type="submit"]:hover {
+  background: #fff;
+  color: #2A2A2C;
+  cursor: pointer;
+}
+body button:active,
+body input[type="button"]:active,
+body input[type="submit"]:active {
+  border-color: #2A2A2C;
+}
+body button:focus,
+body input[type="button"]:focus,
+body input[type="submit"]:focus {
+  outline: 0;
+}
 header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 100;
   background-image: url('../img/stripes.svg');
   background-repeat: no-repeat;
   background-position: right;
@@ -30,10 +62,56 @@ header {
 }
 header .grid-wrapper {
   grid-template-columns: auto 1fr auto;
+  grid-gap: 50px;
 }
 header img.logo {
   height: 60px;
   margin: 20px 0px;
+  transition: 0.6s ease height;
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav a {
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 1.15em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s ease all;
+}
+header nav a:hover {
+  color: #E94F1C;
+}
+header .customer-region {
+  display: flex;
+  align-items: center;
+}
+header .customer-region a {
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s ease all;
+  display: flex;
+  align-items: center;
+}
+header .customer-region a:hover {
+  color: #E94F1C;
+}
+header .customer-region a i {
+  margin-right: 10px;
+}
+header .customer-region a span {
+  font-size: 0.75em;
+}
+header.headerFixed img.logo {
+  height: 35px;
+}
+.headerSpace {
+  width: 100%;
 }
 main {
   margin-top: 70px;
@@ -72,37 +150,116 @@ main.feed article .grid-wrapper .feed-sidebar p {
   margin-bottom: 10px;
   line-height: 1.5;
 }
-main.feed article .grid-wrapper .feed-sidebar button {
-  background: #E94F1C;
-  color: #fff;
-  padding: 10px 25px;
-  font-size: 18px;
-  margin-bottom: 10px;
-  border: 2px solid transparent;
-  transition: 0.15s ease all;
-}
-main.feed article .grid-wrapper .feed-sidebar button:hover {
-  background: #fff;
-  color: #2A2A2C;
-  cursor: pointer;
-}
-main.feed article .grid-wrapper .feed-sidebar button:active {
-  border-color: #2A2A2C;
-}
-main.feed article .grid-wrapper .feed-sidebar button:focus {
-  outline: 0;
-}
 main.feed article .grid-wrapper .feed-sidebar img {
   display: block;
   width: 180px;
   margin: 0 auto;
   margin-top: 30px;
 }
+main.login {
+  display: grid;
+  grid-gap: 50px;
+}
+main.login .grid-wrapper {
+  grid-template-columns: 1fr 350px;
+  grid-gap: 25px;
+}
+main.login .grid-wrapper .login-image {
+  min-height: 400px;
+  background-image: url('../img/feed-merch-soon.jpg');
+  background-size: cover;
+}
+main.login .grid-wrapper .login-sidebar h1 {
+  font-size: 1.75em;
+  margin-bottom: 10px;
+}
+main.login .grid-wrapper .login-sidebar p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+main.login .grid-wrapper .login-sidebar form input {
+  display: block;
+  margin-bottom: 10px;
+}
+main.login .grid-wrapper .login-sidebar form input[type="email"],
+main.login .grid-wrapper .login-sidebar form input[type="password"] {
+  width: 100%;
+  background: #fff;
+  color: #2A2A2C;
+  padding: 10px 25px;
+  font-size: 16px;
+  border: 2px solid #2A2A2C;
+  transition: 0.15s ease all;
+}
+main.login .grid-wrapper .login-sidebar form input[type="email"]:hover,
+main.login .grid-wrapper .login-sidebar form input[type="password"]:hover {
+  background: #eee;
+}
+main.login .grid-wrapper .login-sidebar form input[type="email"]:focus,
+main.login .grid-wrapper .login-sidebar form input[type="password"]:focus {
+  outline: 0;
+  border-color: #E94F1C;
+}
+main.login .grid-wrapper .login-sidebar img {
+  display: block;
+  width: 180px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+main.shirts {
+  display: grid;
+  grid-gap: 50px;
+}
+main.shirts .grid-wrapper {
+  grid-template-columns: 1fr;
+}
+main.shirts .grid-wrapper > h1 {
+  font-size: 2.5em;
+  grid-column: 1 / span 2;
+}
+main.shirts .grid-wrapper .renders {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  margin-top: 15px;
+  width: 100%;
+}
+main.shirts .grid-wrapper .renders .render {
+  height: 400px;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-gap: 10px;
+}
+main.shirts .grid-wrapper .renders .render .shirt-preview {
+  height: 100%;
+  width: 100%;
+  background-image: url('../img/shirt_background.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main.shirts .grid-wrapper .renders .render .shirt-preview img {
+  height: 360px;
+  transition: 0.3s ease all;
+  will-change: transform;
+}
+main.shirts .grid-wrapper .renders .render .shirt-preview:hover img {
+  transform: scale(1.15) rotate(-4deg);
+}
+main.shirts .grid-wrapper .renders .render h2 {
+  font-size: 1.25em;
+  margin: 0 auto;
+}
 footer {
   background-image: url('../img/skyline.png');
   background-position: top;
   background-size: contain;
-  padding-top: 125px;
+  padding-top: 100px;
+  padding-bottom: 50px;
   text-align: center;
   line-height: 1.5;
 }
