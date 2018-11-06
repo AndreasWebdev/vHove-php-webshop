@@ -169,7 +169,6 @@ main {
       }
     }
   }
-
   &.login {
     display: grid;
     grid-gap: 50px;
@@ -225,17 +224,14 @@ main {
       }
     }
   }
-
   &.shirts {
     display: grid;
     grid-gap: 50px;
 
     & .grid-wrapper {
-      grid-template-columns: 1fr;
 
       & > h1 {
         font-size: 2.5em;
-        grid-column: 1 / span 2;
       }
       & .renders {
         display: grid;
@@ -263,7 +259,7 @@ main {
             align-items: center;
 
             & img {
-              height: 360px;
+              height: 400px;
               transition: 0.3s ease all;
               will-change: transform;
             }
@@ -280,13 +276,171 @@ main {
       }
     }
   }
+  &.product {
+    & .grid-wrapper {
+      grid-template-columns: 1fr 350px;
+
+      & .preview {
+        background-image: url('../img/shirt_background.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & img {
+          height: 770px;
+          margin-top: -50px;
+          transition: 0.3s ease all;
+          will-change: transform;
+        }
+
+        &:hover img {
+          transform: scale(1.15) rotate(-4deg);
+        }
+      }
+      & aside {
+        & h1 {
+          font-size: 1.75em;
+          margin-bottom: 10px;
+        }
+        & p {
+          margin-bottom: 10px;
+          line-height: 1.5;
+        }
+        & .price {
+          margin-bottom: 30px;
+
+          & span {
+            display: block;
+            font-size: 3em;
+            color: @colorMain;
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
+        }
+        & form {
+          & input, select {
+            display: block;
+            margin-bottom: 10px;
+
+            &:not([type="submit"]) {
+              width: 100%;
+              background: @bodyText;
+              color: @bodyColor;
+              padding: 10px 25px;
+              font-size: 16px;
+              border: 2px solid @bodyColor;
+              transition: 0.15s ease all;
+
+              &:hover {
+                background: #eee;
+              }
+              &:focus {
+                outline: 0;
+                border-color: @colorMain;
+              }
+            }
+          }
+        }
+        & .not-logged-in {
+          font-weight: bold;
+          background: @colorMain;
+          padding: 15px;
+        }
+      }
+    }
+  }
+  &.checkout {
+    display: grid;
+    grid-gap: 50px;
+
+    & .grid-wrapper {
+      grid-gap: 25px;
+
+      & > h1 {
+        font-size: 2.5em;
+      }
+      & .cart {
+        width: 100%;
+        border: 2px solid #fff;
+
+        & .item {
+          padding: 5px 0px;
+          width: 100%;
+          display: grid;
+          grid-template-columns: 60px 1fr auto auto auto;
+          grid-gap: 15px;
+          align-items: center;
+
+          & .preview {
+            display: flex;
+            justify-content: center;
+
+            & img {
+              height: 60px;
+            }
+          }
+          & .actions {
+            & button {
+              padding: 5px 10px;
+              font-size: 0.85em;
+              margin-bottom: 0px;
+            }
+          }
+          &:nth-child(even) {
+            background: rgba(255,255,255,0.1);
+          }
+        }
+      }
+      & .total {
+        text-align: right;
+
+        & span {
+          display: block;
+          font-size: 3em;
+          color: @colorMain;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+      }
+      & form {
+        display: grid;
+        grid-gap: 15px;
+
+        & label {
+          display: block;
+          font-size: 1.15em;
+          margin-bottom: 5px;
+        }
+        & input:not([type="submit"]) {
+          width: 100%;
+          background: @bodyText;
+          color: @bodyColor;
+          padding: 10px 25px;
+          font-size: 16px;
+          border: 2px solid @bodyColor;
+          transition: 0.15s ease all;
+
+          &:hover {
+            background: #eee;
+          }
+          &:focus {
+            outline: 0;
+            border-color: @colorMain;
+          }
+        }
+      }
+    }
+  }
 }
 
 footer {
   background-image: url('../img/skyline.png');
   background-position: top;
   background-size: contain;
-  padding-top: 100px;
+  padding-top: 150px;
   padding-bottom: 50px;
   text-align: center;
   line-height: 1.5;

@@ -25,7 +25,6 @@
                 } else {
                   // Create User
                   if(loginUser($email, $password)) {
-                    $_SESSION['tja-login'] = true;
                     header("Location: index.php");
                   }
                 }

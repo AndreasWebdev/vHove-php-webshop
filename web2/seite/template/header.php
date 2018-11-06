@@ -9,6 +9,7 @@
     <div class="customer-region">
       <?php
         if($_SESSION['tja-login']) {
+          var_dump($_SESSION['tja-login']);
           ?>
             <a href="checkout.php"><i class="mdi mdi-cart-outline"></i> <span>Dein Beut'l</span></a>
             <a href="logout.php"><i class="mdi mdi-account-circle-outline"></i> <span>Logout</span></a>

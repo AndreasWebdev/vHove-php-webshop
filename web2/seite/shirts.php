@@ -59,11 +59,54 @@
 
 <?php
   } else {
+    // IF PUT IN CART
+    if($_POST['submit']) {
+      if(addToCart($_GET['id'], $_SESSION['tja-login'], $_POST['variant'], $_POST['quantity'])) {
+        header("Location: checkout.php");
+      }
+    }
+
     // GET PRODUCT DATA
+    $productData = getProduct($_GET['id']);
 
     // SHOW PRODUCT PAGE
     ?>
-    <main></main>
+    <main class="product">
+      <div class="grid-wrapper">
+        <div class="preview">
+          <img src="assets/product_images/<?=$productData['cover_image'];?>" />
+        </div>
+        <aside>
+          <h1><?=$productData['name'];?></h1>
+          <p><?=$productData['description'];?></p>
+          <div class="price">
+            <span><?=$productData['price'];?> <i class="mdi mdi-currency-eur"></i></span>
+            Inkl. 19% MwSt., zzgl. Versandkost'n
+          </div>
+          <?php
+            if(!$_SESSION['tja-login']) {
+              echo '<p class="not-logged-in">Du musst eingeloggt sein, um ein Produkt zu bestellen.</p>';
+            } else {
+              ?>
+                <form action="" method="post">
+                  <select name="variant" required>
+                    <option value="" disabled selected>Größe</option>
+                    <option value="size-xs">XS</option>
+                    <option value="size-s">S</option>
+                    <option value="size-m">M</option>
+                    <option value="size-l">L</option>
+                    <option value="size-xl">XL</option>
+                    <option value="size-xxl">XXL</option>
+                  </select>
+                  <input type="number" name="quantity" placeholder="Wie viele willse?" />
+                  <input type="submit" name="submit" value="Innen Beut'l" />
+                </form>
+              <?php
+            }
+          ?>
+        </aside>
+      </div>
+    </main>
     <?php
   }
 

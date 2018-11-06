@@ -210,12 +210,8 @@ main.shirts {
   display: grid;
   grid-gap: 50px;
 }
-main.shirts .grid-wrapper {
-  grid-template-columns: 1fr;
-}
 main.shirts .grid-wrapper > h1 {
   font-size: 2.5em;
-  grid-column: 1 / span 2;
 }
 main.shirts .grid-wrapper .renders {
   display: grid;
@@ -243,7 +239,7 @@ main.shirts .grid-wrapper .renders .render .shirt-preview {
   align-items: center;
 }
 main.shirts .grid-wrapper .renders .render .shirt-preview img {
-  height: 360px;
+  height: 400px;
   transition: 0.3s ease all;
   will-change: transform;
 }
@@ -254,11 +250,151 @@ main.shirts .grid-wrapper .renders .render h2 {
   font-size: 1.25em;
   margin: 0 auto;
 }
+main.product .grid-wrapper {
+  grid-template-columns: 1fr 350px;
+}
+main.product .grid-wrapper .preview {
+  background-image: url('../img/shirt_background.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main.product .grid-wrapper .preview img {
+  height: 770px;
+  margin-top: -50px;
+  transition: 0.3s ease all;
+  will-change: transform;
+}
+main.product .grid-wrapper .preview:hover img {
+  transform: scale(1.15) rotate(-4deg);
+}
+main.product .grid-wrapper aside h1 {
+  font-size: 1.75em;
+  margin-bottom: 10px;
+}
+main.product .grid-wrapper aside p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+main.product .grid-wrapper aside .price {
+  margin-bottom: 30px;
+}
+main.product .grid-wrapper aside .price span {
+  display: block;
+  font-size: 3em;
+  color: #E94F1C;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+main.product .grid-wrapper aside form input,
+main.product .grid-wrapper aside form select {
+  display: block;
+  margin-bottom: 10px;
+}
+main.product .grid-wrapper aside form input:not([type="submit"]),
+main.product .grid-wrapper aside form select:not([type="submit"]) {
+  width: 100%;
+  background: #fff;
+  color: #2A2A2C;
+  padding: 10px 25px;
+  font-size: 16px;
+  border: 2px solid #2A2A2C;
+  transition: 0.15s ease all;
+}
+main.product .grid-wrapper aside form input:not([type="submit"]):hover,
+main.product .grid-wrapper aside form select:not([type="submit"]):hover {
+  background: #eee;
+}
+main.product .grid-wrapper aside form input:not([type="submit"]):focus,
+main.product .grid-wrapper aside form select:not([type="submit"]):focus {
+  outline: 0;
+  border-color: #E94F1C;
+}
+main.product .grid-wrapper aside .not-logged-in {
+  font-weight: bold;
+  background: #E94F1C;
+  padding: 15px;
+}
+main.checkout {
+  display: grid;
+  grid-gap: 50px;
+}
+main.checkout .grid-wrapper {
+  grid-gap: 25px;
+}
+main.checkout .grid-wrapper > h1 {
+  font-size: 2.5em;
+}
+main.checkout .grid-wrapper .cart {
+  width: 100%;
+  border: 2px solid #fff;
+}
+main.checkout .grid-wrapper .cart .item {
+  padding: 5px 0px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 60px 1fr auto auto auto;
+  grid-gap: 15px;
+  align-items: center;
+}
+main.checkout .grid-wrapper .cart .item .preview {
+  display: flex;
+  justify-content: center;
+}
+main.checkout .grid-wrapper .cart .item .preview img {
+  height: 60px;
+}
+main.checkout .grid-wrapper .cart .item .actions button {
+  padding: 5px 10px;
+  font-size: 0.85em;
+  margin-bottom: 0px;
+}
+main.checkout .grid-wrapper .cart .item:nth-child(even) {
+  background: rgba(255, 255, 255, 0.1);
+}
+main.checkout .grid-wrapper .total {
+  text-align: right;
+}
+main.checkout .grid-wrapper .total span {
+  display: block;
+  font-size: 3em;
+  color: #E94F1C;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+main.checkout .grid-wrapper form {
+  display: grid;
+  grid-gap: 15px;
+}
+main.checkout .grid-wrapper form label {
+  display: block;
+  font-size: 1.15em;
+  margin-bottom: 5px;
+}
+main.checkout .grid-wrapper form input:not([type="submit"]) {
+  width: 100%;
+  background: #fff;
+  color: #2A2A2C;
+  padding: 10px 25px;
+  font-size: 16px;
+  border: 2px solid #2A2A2C;
+  transition: 0.15s ease all;
+}
+main.checkout .grid-wrapper form input:not([type="submit"]):hover {
+  background: #eee;
+}
+main.checkout .grid-wrapper form input:not([type="submit"]):focus {
+  outline: 0;
+  border-color: #E94F1C;
+}
 footer {
   background-image: url('../img/skyline.png');
   background-position: top;
   background-size: contain;
-  padding-top: 100px;
+  padding-top: 150px;
   padding-bottom: 50px;
   text-align: center;
   line-height: 1.5;
