@@ -22,6 +22,12 @@ body {
   min-height: 100vh;
 }
 body button,
+body input,
+body textarea,
+body select {
+  font-family: 'Arvo', serif;
+}
+body button,
 body input[type="button"],
 body input[type="submit"] {
   background: #E94F1C;

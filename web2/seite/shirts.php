@@ -85,7 +85,7 @@
           </div>
           <?php
             if(!$_SESSION['tja-login']) {
-              echo '<p class="not-logged-in">Du musst eingeloggt sein, um ein Produkt zu bestellen.</p>';
+              echo '<p class="not-logged-in">Ers\' einlocken.</p>';
             } else {
               ?>
                 <form action="" method="post">
