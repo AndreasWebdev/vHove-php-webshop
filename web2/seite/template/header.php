@@ -4,7 +4,7 @@
     <nav>
       <a href="index.php">Start</a>
       <a href="shirts.php">Shörts</a>
-      <a href="soon.php">Anderen Krämpl</a>
+      <a href="soon.php">Anderer Krämpl</a>
     </nav>
     <div class="customer-region">
       <?php
@@ -15,8 +15,8 @@
           <?php
         } else {
           ?>
-            <a href="login.php"><i class="mdi mdi-login-variant"></i> <span>Einloggen</span></a>
-            <a href="register.php"><i class="mdi mdi-account-plus-outline"></i> <span>Registrieren</span></a>
+            <a href="login.php"><i class="mdi mdi-login-variant"></i> <span>Einloggn</span></a>
+            <a href="register.php"><i class="mdi mdi-account-plus-outline"></i> <span>Registriern</span></a>
           <?php
         }
       ?>
