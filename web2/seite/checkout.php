@@ -25,10 +25,10 @@
             }
 
             if($cart == false) {
-              echo "<h1>Dein Beut'l</h1><p>Dein Beut'l ist ja noch leer!<br />Komm wieder, wenn du Produkte hinzugefügt hast!</p>";
+              echo "<h1>Dein Karren</h1><p>Dein Karren ist ja noch leer!<br />Komm wieder, wenn du Produkte hinzugefügt hast!</p>";
             } else {
               ?>
-                <h1>Dein Beut'l</h1>
+                <h1>Dein Karren</h1>
                 <div class="cart">
               <?php
               foreach ($cart as $cartItem) {
@@ -56,7 +56,7 @@
                 </div>
                 <div class="total">
                   <span><?=$total;?> <i class="mdi mdi-currency-eur"></i></span>
-                  Inkl. 19% MwSt., zzgl. Versandkost'n
+                  Inkl. 19% MwSt., inkl. Versandkostn
                 </div>
 
                 <h1>Bestelldetails</h1>
