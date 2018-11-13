@@ -11,7 +11,7 @@
         <?php
           if($_POST['submit']) {
             if(createOrder($_SESSION['tja-login'], $_POST['forname'], $_POST['name'], $_POST['adress'], $_POST['zip'], $_POST['city'])) {
-              echo "<h1>Bestellung erfolgreich!</h1><p>Deine Bestellung ist bei uns eingegangen und wird nun verarbeitet!</p>";
+              echo "<h1>Bestellung erfolgreich!</h1><p>Vielen Dank, deine Bestellung ist bei uns eingegangen und wird nun bearbeitet. Du wirst per Mail über den Versand informiert. Glück auf!</p>";
             } else {
               echo "<h1>Bestellung konnte nicht aufgegeben werden!</h1><p>Da ist wohl etwas schief gelaufen! Versuche es später noch einmal!";
             }
@@ -34,7 +34,7 @@
               foreach ($cart as $cartItem) {
                 $product = getProduct($cartItem['product_id']);
 
-                $total += $product['price'] * $cartItem['quantity'];
+                $total += $product['price'] * $cartItem['quantity'] + 4;
 
                 ?>
                   <div class="item">
@@ -47,6 +47,12 @@
               }
 
               ?>
+                <div class="item">
+                  <div class="preview"></div>
+                  <div class="name">Versandkosten</div>
+                  <div class="price">4.00 <i class="mdi mdi-currency-eur"></i></div>
+                  <div class="actions">&nbsp;</div>
+                </div>
                 </div>
                 <div class="total">
                   <span><?=$total;?> <i class="mdi mdi-currency-eur"></i></span>
@@ -76,7 +82,7 @@
                     <input type="text" name="city" placeholder="Musterstadt" required />
                   </div>
                   <div class="item">
-                    <input type="submit" name="submit" value="Bestellen" />
+                    <input type="submit" name="submit" value="Bestelln" />
                   </div>
                 </form>
               <?php

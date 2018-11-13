@@ -85,7 +85,7 @@
           </div>
           <?php
             if(!$_SESSION['tja-login']) {
-              echo '<p class="not-logged-in">Ers\' einlocken.</p>';
+              echo '<p class="not-logged-in">Ers einloggn.</p>';
             } else {
               ?>
                 <form action="" method="post">

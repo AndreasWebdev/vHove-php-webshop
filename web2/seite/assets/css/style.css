@@ -18,7 +18,8 @@ body {
   font-family: 'Arvo', serif;
   font-size: 16px;
   display: grid;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto 1fr auto;
+  align-items: flex-start;
   min-height: 100vh;
 }
 body button,
@@ -396,11 +397,24 @@ main.checkout .grid-wrapper form input:not([type="submit"]):focus {
   outline: 0;
   border-color: #E94F1C;
 }
+main.impressum {
+  display: grid;
+  grid-gap: 50px;
+}
+main.impressum .grid-wrapper {
+  grid-gap: 25px;
+}
+main.impressum .grid-wrapper > h1 {
+  font-size: 2.5em;
+}
+main.impressum .grid-wrapper p {
+  line-height: 1.5;
+}
 footer {
   background-image: url('../img/skyline.png');
   background-position: top;
   background-size: contain;
-  padding-top: 150px;
+  padding-top: 80px;
   padding-bottom: 50px;
   text-align: center;
   line-height: 1.5;

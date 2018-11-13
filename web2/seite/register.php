@@ -10,7 +10,7 @@
       <div class="grid-wrapper">
         <div class="login-image"></div>
         <div class="login-sidebar">
-          <h1>Registrieren</h1>
+          <h1>Registriern</h1>
           <p>Mit einer Registration kannst du Produkte in deinen Einkaufswagen legen und bei uns bestellen.</p>
           <form action="" method="post">
             <input type="email" name="email" placeholder="E-Mail" required />
@@ -37,7 +37,7 @@
                 }
               }
             ?>
-            <input type="submit" name="submit" value="Registrieren" />
+            <input type="submit" name="submit" value="Registriern" />
           </form>
         </div>
       </div>

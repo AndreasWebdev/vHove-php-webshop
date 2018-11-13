@@ -25,7 +25,8 @@ body {
   font-family: 'Arvo', serif;
   font-size: 16px;
   display: grid;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto 1fr auto;
+  align-items: flex-start;
   min-height: 100vh;
 
   button, input, textarea, select {
@@ -437,13 +438,28 @@ main {
       }
     }
   }
+  &.impressum {
+    display: grid;
+    grid-gap: 50px;
+
+    & .grid-wrapper {
+      grid-gap: 25px;
+
+      & > h1 {
+        font-size: 2.5em;
+      }
+      & p {
+        line-height: 1.5;
+      }
+    }
+  }
 }
 
 footer {
   background-image: url('../img/skyline.png');
   background-position: top;
   background-size: contain;
-  padding-top: 150px;
+  padding-top: 80px;
   padding-bottom: 50px;
   text-align: center;
   line-height: 1.5;
