@@ -4,13 +4,13 @@
     <nav>
       <a href="index.php">Start</a>
       <a href="shirts.php">Shörts</a>
-      <a href="soon.php">Anderes Zeuch</a>
+      <a href="soon.php">Anderen Krämpl</a>
     </nav>
     <div class="customer-region">
       <?php
         if($_SESSION['tja-login']) {
           ?>
-            <a href="checkout.php"><i class="mdi mdi-cart-outline"></i> <span>Dein Beut'l</span></a>
+            <a href="checkout.php"><i class="mdi mdi-cart-outline"></i> <span>Dein Karren</span></a>
             <a href="logout.php"><i class="mdi mdi-account-circle-outline"></i> <span>Logout</span></a>
           <?php
         } else {

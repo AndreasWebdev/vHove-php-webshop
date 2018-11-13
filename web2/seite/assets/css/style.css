@@ -130,7 +130,7 @@ main.feed {
 main.feed article .grid-wrapper {
   grid-template-rows: auto 1fr;
   grid-template-columns: 1fr 350px;
-  grid-gap: 25px;
+  grid-gap: 50px;
 }
 main.feed article .grid-wrapper > h1 {
   font-size: 2.5em;
@@ -168,11 +168,11 @@ main.login {
 }
 main.login .grid-wrapper {
   grid-template-columns: 1fr 350px;
-  grid-gap: 25px;
+  grid-gap: 50px;
 }
 main.login .grid-wrapper .login-image {
   min-height: 400px;
-  background-image: url('../img/feed-merch-soon.jpg');
+  background-image: url('../img/login-image.jpg');
   background-size: cover;
 }
 main.login .grid-wrapper .login-sidebar h1 {

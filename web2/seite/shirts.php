@@ -11,7 +11,7 @@
     <main class="shirts">
       <article>
         <div class="grid-wrapper">
-          <h1>Für Typps</h1>
+          <h1>Typpen</h1>
           <div class="renders">
             <div class="render">
               <a href="shirts.php?id=1">
@@ -27,19 +27,19 @@
                   <img src="assets/product_images/m_s2.png" />
                 </div>
               </a>
-              <h2>Gels'nkirchen</h2>
+              <h2>Gelsnkirchn</h2>
             </div>
           </div>
         </div>
       </article>
       <article>
         <div class="grid-wrapper">
-          <h1>Für Ischen</h1>
+          <h1>Ischen</h1>
           <div class="renders">
             <div class="render">
               <a href="shirts.php?id=3">
                 <div class="shirt-preview">
-                  <img src="assets/product_images/f_s1.png" />
+                  <img src="assets/product_images/f_s2.png" />
                 </div>
               </a>
               <h2>Ruhrpott</h2>
@@ -47,10 +47,10 @@
             <div class="render">
               <a href="shirts.php?id=4">
                 <div class="shirt-preview">
-                  <img src="assets/product_images/f_s2.png" />
+                  <img src="assets/product_images/f_s1.png" />
                 </div>
               </a>
-              <h2>Gels'nkirchen</h2>
+              <h2>Gelsnkirchn</h2>
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@
                     <option value="size-xxl">XXL</option>
                   </select>
                   <input type="number" name="quantity" placeholder="Wie viele willse?" />
-                  <input type="submit" name="submit" value="Innen Beut'l" />
+                  <input type="submit" name="submit" value="Innen Karren" />
                 </form>
               <?php
             }
