@@ -23,13 +23,14 @@
                 $password2 = $_POST['password2'];
 
                 if($password != $password2) {
+                  // Passwords not equal
                   echo "<p>Passwörter stimmen nicht überein!</p>";
                 } else {
                   // Check if email already exists
                   if(checkIfUserExists($email)) {
                     echo "<p>E-Mail wird bereits genutzt!</p>";
                   } else {
-                    // Create User
+                    // Create User, loggs in and redirect if successful
                     if(createUser($email, $password)) {
                       header("Location: index.php");
                     }

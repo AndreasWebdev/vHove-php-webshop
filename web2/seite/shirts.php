@@ -7,6 +7,7 @@
   include('template/header.php');
 
   if(!isset($_GET['id'])) {
+    // Show all Shirts if no ID is set
 ?>
     <main class="shirts">
       <article>
@@ -59,7 +60,7 @@
 
 <?php
   } else {
-    // IF PUT IN CART
+    // Add product to cart
     if($_POST['submit']) {
       if(addToCart($_GET['id'], $_SESSION['tja-login'], $_POST['variant'], $_POST['quantity'])) {
         header("Location: checkout.php");
@@ -84,6 +85,7 @@
             Inkl. 19% MwSt., zzgl. Versandkost'n
           </div>
           <?php
+            // Check if logged in
             if(!$_SESSION['tja-login']) {
               echo '<p class="not-logged-in">Ers einloggn.</p>';
             } else {

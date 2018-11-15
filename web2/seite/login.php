@@ -19,11 +19,11 @@
                 $email = $_POST['email'];
                 $password = $_POST['password'];
 
-                // Check if email already exists
                 if(!checkIfUserExists($email)) {
+                  // There is no user with that email
                   echo "<p>Diese E-Mail existiert noch nicht!</p>";
                 } else {
-                  // Create User
+                  // Logs User In and sends him to index
                   if(loginUser($email, $password)) {
                     header("Location: index.php");
                   }

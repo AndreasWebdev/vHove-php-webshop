@@ -11,31 +11,43 @@
         <?php
           if($_POST['submit']) {
             if(createOrder($_SESSION['tja-login'], $_POST['forname'], $_POST['name'], $_POST['adress'], $_POST['zip'], $_POST['city'])) {
+              // Successful
               echo "<h1>Bestellung erfolgreich!</h1><p>Vielen Dank, deine Bestellung ist bei uns eingegangen und wird nun bearbeitet. Du wirst per Mail über den Versand informiert. Glück auf!</p>";
             } else {
+              // Error
               echo "<h1>Bestellung konnte nicht aufgegeben werden!</h1><p>Da ist wohl etwas schief gelaufen! Versuche es später noch einmal!";
             }
           } else {
+            // Get current cart
             $cart = getCart($_SESSION['tja-login']);
-            $total = 0;
 
+            // 4€ Shipping
+            $total = 4;
+
+            // Remove from cart
             if($_GET['remove']) {
               removeFromCart($_GET['remove']);
               header("Location: checkout.php");
             }
 
             if($cart == false) {
+              // Cart is empty
               echo "<h1>Dein Karren</h1><p>Dein Karren ist ja noch leer!<br />Komm wieder, wenn du Produkte hinzugefügt hast!</p>";
             } else {
+              // Cart Checkout
               ?>
                 <h1>Dein Karren</h1>
                 <div class="cart">
               <?php
+              // Go through all Cart Items
               foreach ($cart as $cartItem) {
+                // Get Information for that Product
                 $product = getProduct($cartItem['product_id']);
 
-                $total += $product['price'] * $cartItem['quantity'] + 4;
+                // Add product price times quantity to current total
+                $total += $product['price'] * $cartItem['quantity'];
 
+                // Show Cart Item
                 ?>
                   <div class="item">
                     <div class="preview"><img src="assets/product_images/<?=$product['cover_image'];?>" /></div>
