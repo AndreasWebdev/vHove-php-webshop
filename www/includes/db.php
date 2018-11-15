@@ -1,4 +1,5 @@
 <?php
+  // if there are mysql errors, don't just ignore them but show them
   mysqli_report(MYSQLI_REPORT_STRICT);
 
   // Connect to database
