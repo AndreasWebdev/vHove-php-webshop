@@ -4,8 +4,11 @@
 ## Ein Schulprojekt vom 14. November 2018
 tja! Webshop ist ein Schulprojekt für die Berufsschule für Technik und Gestaltung. Das Projekt wurde im Rahmen des Fachs "Medienintegration und Medienausgabe" im dritten Lehrjahr durch Frau vom Hove gestellt. Es ging in dem Projekt um die Erstellung eines Webshops mit PHP Grundlage und dem Thema "Ruhrgebiet/Ruhrpott/Gelsenkirchen".
 
-## Demo
+### Demo
 [http://andreas-heimann.com/schule/vHove-php-webshop/](http://andreas-heimann.com/schule/vHove-php-webshop/)
+
+### Code
+[Einfach auf "Source code (zip) klicken"](https://github.com/AndreasWebdev/vHove-php-webshop/releases/latest)
 
 ## Team
 * Thiemo Frömberg
